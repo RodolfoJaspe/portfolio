@@ -1,0 +1,9 @@
+img {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 25vw;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid salmon;
+  margin: 5vh;
+}

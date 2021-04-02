@@ -1,8 +1,9 @@
 import React from 'react';
-import {Route, NavLink, Switch} from "react-router-dom";
+import {Route, Link as Link, Switch} from "react-router-dom";
 import './App.css';
 import About from "./components/About";
 import Projects from "./components/Projects";
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -11,15 +12,15 @@ function App() {
                 <header className="header">
                     <h1>Rodolfo Jaspe</h1>
                     <div className="header-nav">
-                        <NavLink to="/">Home</NavLink>
-                        <NavLink to= "/projects">Projects</NavLink>
-                        <NavLink to="/about">About Me</NavLink>
+                        <Link to="/">Home</Link>
+                        <Link to= "/projects">Projects</Link>
+                        <Link to="/about">About Me</Link>
                     </div>
                
                 </header>
                 <main>
                     <Switch>
-                        <Route exact path="/" />
+                        <Route exact path="/" component={Home}/>
                         <Route path="/projects" component={Projects}/>
                         <Route path="/about" component={About} />
                     </Switch>
