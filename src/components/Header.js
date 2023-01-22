@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Header.css';
-import FadeIn from 'react-fade-in';
 import linkedIn from '../Assets/linkedin.png'
 import github from '../Assets/github.png'
 import { connect } from 'react-redux';
@@ -35,7 +34,7 @@ function Header({skillsState, showSkills}) {
                         Full Stack Developer
                     </div>
                 </div>
-                {skillsState? <FadeIn transitionDuration="1000" className='skills-container'>
+                {skillsState? <div className='skills-container'>
                     <h2>{'{'}</h2>
                     <div className='skills-outer'>
                         <div className='skills-inner'>
@@ -47,9 +46,8 @@ function Header({skillsState, showSkills}) {
                         </div>
                     </div>
                     <h2>{'}'}</h2>
-                </FadeIn> : ""
+                </div> : ""
             }
-                
             </div>
         </header>
     )
