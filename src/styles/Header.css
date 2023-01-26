@@ -47,11 +47,16 @@ h1 {
     flex-direction: column;
     align-items: center;
     padding: 1vw 2vw;
-    height: 10vw;
-    margin: 4vw 0 55vh 0;
     transition: 1s;
     /* background-color: lightseagreen; */
-  }
+}
+.slash {
+    color:red;
+    font-size:6vw; 
+    height: 100%; 
+    display: flex; 
+    align-items: center;
+}
 
 .name-title {
   display: flex;
@@ -214,7 +219,16 @@ h1 {
     cursor: pointer;
   }
 
-@media (max-width: 1000px) {
+  @media (max-width: 1000px) {
+    .skills-container {
+        width: 80%;
+    }
+    .name {
+        font-size: larger;
+    }
+  }
+
+/* @media (max-width: 1000px) {
   .header-nav {
     margin-top: 0;
     margin-bottom: 4vw;
@@ -236,7 +250,6 @@ h1 {
   }
 
   .name-title {
-    /* background: red; */
     width: 100%;
     justify-content: space-evenly;
   }
@@ -257,7 +270,6 @@ h1 {
     width: 50%;
     display: flex;
     justify-content: center;
-    /* background-color: blue; */
   }
 
   .title {
@@ -265,7 +277,6 @@ h1 {
     color: rgba(83, 149, 211, 0.753);
     font-size: 3vw;
     width: 100%;
-    text-decoration: underline;
   }
 
   .title:hover {
@@ -303,13 +314,12 @@ h1 {
   .skills-inner p {
     color: rgba(255, 93, 43, 0.842);
   }
-}
+} */
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
   .h1-div {
     height: 20vw;
     margin-top: 20vw;
-    /* background-color: blue; */
   }
   .h1-div2 {
     margin-top: 15vw;
@@ -317,27 +327,37 @@ h1 {
   .name h1 {
     font-size: 7vw;
     width: 100%;
-    /* background-color: green; */
   }
 
-}
+} */
 
 @media (max-width: 500px) {
-  .header-nav {
+  /* .header-nav {
     font-size: 4vw;
     margin-top: 4vw;
-  }
+  } */
+
   .h1-div {
-    height: 20vw;
-    /* background-color: blue; */
-  }
-  .h1-div2 {
-    margin-bottom: 90vw;
+    height: 100%;
   }
 
+  /* .h1-div2 {
+    margin-bottom: 90vw;
+  } */
+
+  .name-title {
+    margin-top: 10vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .name {
+    font-size: 1.5rem;
+  }
   .title {
-    /* background-color: violet; */
-    font-size: 3.5vw;
-    width: 100%;
+    font-size: larger;
+    margin: 2vw;
+  }
+  .slash {
+    font-size: 12vw;
   }
 }

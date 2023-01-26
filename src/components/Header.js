@@ -27,7 +27,7 @@ function Header({skillsState, showSkills}) {
                         <div className='first-name'>Rodolfo</div>
                         <div className='last-name'>Jaspe</div>
                     </h1> 
-                    <div style={{color:"red",fontSize:"6vw", height: '100%', display: 'flex', alignItems: 'center'}}>
+                    <div className='slash'>
                         /
                     </div>
                     <div className='title' onClick={()=>showSkills(skillsState)}>
