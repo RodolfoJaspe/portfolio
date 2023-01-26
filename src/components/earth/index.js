@@ -40,7 +40,7 @@ export function Earth(props) {
             <Stars 
                 radius={100} 
                 depth={60} 
-                count={30000} 
+                count={20000} 
                 factor={7} 
                 fade={true}/>
             <mesh ref={cloudsRef} >
