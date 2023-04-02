@@ -28,6 +28,8 @@ export function Earth(props) {
         cloudsRef.current.rotation.x = window.scrollY / 10000
     })
 
+    console.log(window.innerWidth / 100)
+
     
 
     return (
@@ -40,7 +42,7 @@ export function Earth(props) {
             <Stars 
                 radius={100} 
                 depth={60} 
-                count={20000} 
+                count={10000} 
                 factor={7} 
                 fade={true}/>
             <mesh ref={cloudsRef} >
