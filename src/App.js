@@ -16,11 +16,11 @@ function App() {
 
     return (
         <div className='app'>
-            <div className='content'>
+            {/* <div className='content'>
                 <Header />
                 <Projects />
                 <About />
-            </div>
+            </div> */}
             <div className='globe'>
                <Canvas>
                 <Suspense fallback={<Loader/>}>

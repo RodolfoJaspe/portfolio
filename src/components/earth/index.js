@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 import EarthDayMap from '../../Assets/textures/8k_earth_daymap.jpg';
 import EarthCloudsMap from '../../Assets/textures/8k_earth_clouds.jpg'
@@ -7,11 +7,15 @@ import EarthSpecularMap from '../../Assets/textures/8k_earth_specular_map.jpg'
 import EarthNormalMap from '../../Assets/textures/8k_earth_normal_map.jpg'
 import { useFrame, useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
-import { OrbitControls, Stars } from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera, Stars } from "@react-three/drei";
 import * as THREE from "three";
 
 
 export function Earth(props) {
+
+    const cameraRef = useRef();
+    const [cameraPosition, setCameraPosition] = useState([0, 0, 10]);
+    const [cameraRotation, setCameraRotation] = useState([0, 0, 0]);
 
     const [colorMap, normalMap, nightMap, specularMap, cloudsMap] = useLoader(TextureLoader, [EarthDayMap, EarthNormalMap, EarthNightMap, EarthSpecularMap, EarthCloudsMap])
 
@@ -26,11 +30,53 @@ export function Earth(props) {
 
         earthRef.current.rotation.x = window.scrollY / 10000
         cloudsRef.current.rotation.x = window.scrollY / 10000
+
+        cameraRef.current.position.set(...cameraPosition);
+        cameraRef.current.rotation.set(...cameraRotation);
+          
+          
     })
 
-    console.log(window.innerWidth / 100)
+    useEffect(() => {
+        function handleKeyDown(event) {
+          switch (event.code) {
+            case "KeyW":
+              setCameraPosition((prev) => [prev[0], prev[1], prev[2] - 1]);
+              break;
+            case "KeyA":
+              setCameraPosition((prev) => [prev[0] - 1, prev[1], prev[2]]);
+              break;
+            case "KeyS":
+              setCameraPosition((prev) => [prev[0], prev[1], prev[2] + 1]);
+              break;
+            case "KeyD":
+              setCameraPosition((prev) => [prev[0] + 1, prev[1], prev[2]]);
+              break;
+            default:
+              break;
+          }
+        }
+      
+        function handleMouseMove(event) {
+          if (event.buttons === 1) {
+            setCameraRotation((prev) => [
+              prev[0] - event.movementY / 100,
+              prev[1] - event.movementX / 100,
+              prev[2],
+            ]);
+          }
+        }
+      
+        document.addEventListener("keydown", handleKeyDown);
+        document.addEventListener("mousemove", handleMouseMove);
+      
+        return () => {
+          document.removeEventListener("keydown", handleKeyDown);
+          document.removeEventListener("mousemove", handleMouseMove);
+        };
+      }, []);
+      
 
-    
 
     return (
         <>
@@ -64,15 +110,20 @@ export function Earth(props) {
                     normalMap={normalMap} 
                     metalness={.4} 
                     roughness={.7}/>
-                {/* <OrbitControls 
+                <OrbitControls 
                     enableZoom={true} 
                     enablePan={true} 
                     enableRotate={true} 
                     zoomSpeed={.6} 
                     panSpeed={.5} 
                     rotateSpeed={.4} 
-                /> */}
+                />
             </mesh>
+            <PerspectiveCamera
+                ref={cameraRef}
+                position={cameraPosition}
+                rotation={cameraRotation}
+            />
         </>
     )
 }
