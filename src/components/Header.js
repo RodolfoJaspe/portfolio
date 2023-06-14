@@ -5,7 +5,7 @@ import github from '../Assets/github.png'
 import { connect } from 'react-redux';
 import { showSkills } from '../actions'
 
-function Header({skillsState, showSkills}) {
+function Header({skillsState, showSkills, focus}) {
 
     return (
         <header> 
@@ -27,14 +27,14 @@ function Header({skillsState, showSkills}) {
                         <div className='first-name'>Rodolfo</div>
                         <div className='last-name'>Jaspe</div>
                     </h1> 
-                    <div className='slash'>
+                    {/* <div className='slash'>
                         /
-                    </div>
-                    <div className='title' onClick={()=>showSkills(skillsState)}>
+                    </div> */}
+                    {/* <div className='title' onClick={()=>showSkills(skillsState)}>
                         Full Stack Developer
-                    </div>
+                    </div> */}
                 </div>
-                {skillsState? <div className='skills-container'>
+                 {!focus?<div className='skills-container'>
                     <h2>{'{'}</h2>
                     <div className='skills-outer'>
                         <div className='skills-inner'>
@@ -46,8 +46,7 @@ function Header({skillsState, showSkills}) {
                         </div>
                     </div>
                     <h2>{'}'}</h2>
-                </div> : ""
-            }
+                </div>:null}
             </div>
         </header>
     )

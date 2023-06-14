@@ -46,32 +46,30 @@ export function Earth(props) {
                 factor={7} 
                 fade={true}/>
             <mesh ref={cloudsRef} >
-                <>
-                    <sphereGeometry args={[3.501, 64, 64]} />
-                    <meshPhongMaterial 
-                        map={cloudsMap} 
-                        opacity={.3} 
-                        depthWrite={true} 
-                        transparent={true} 
-                        side={THREE.DoubleSide}/>
-                </>
+                <sphereGeometry args={[2.501, 64, 64]} />
+                <meshPhongMaterial 
+                    map={cloudsMap} 
+                    opacity={.3} 
+                    depthWrite={true} 
+                    transparent={true} 
+                    side={THREE.DoubleSide}/>
             </mesh>
             <mesh ref={earthRef} >
-                <sphereGeometry args={[3.5, 64 ,64]}/>
+                <sphereGeometry args={[2.5, 64 ,64]}/>
                 <meshPhongMaterial specularMap={specularMap}/>
                 <meshStandardMaterial 
                     map={colorMap} 
                     normalMap={normalMap} 
                     metalness={.4} 
                     roughness={.7}/>
-                {/* <OrbitControls 
+                <OrbitControls 
                     enableZoom={true} 
                     enablePan={true} 
                     enableRotate={true} 
                     zoomSpeed={.6} 
                     panSpeed={.5} 
                     rotateSpeed={.4} 
-                /> */}
+                />
             </mesh>
         </>
     )

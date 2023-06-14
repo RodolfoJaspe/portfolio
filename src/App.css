@@ -16,10 +16,33 @@ body {
     height: 100%;
 }
 
+.toggler {
+    height: 5%;
+    width: 5%;
+    position: fixed;
+    right: 5%;
+    top: 40%;
+    cursor: pointer;
+    z-index: 3;
+    text-align: center;
+}
+.toggler h2{
+    color: rgb(217, 65, 31);
+    cursor:default;
+}
+
 .globe {
     position: fixed;
     height: 100%;
     width: 100%;
+    z-index: 1;
+}
+
+.globe-back {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
 }
 
 .content {
@@ -29,7 +52,16 @@ body {
     height: 100%;
     width: 100%;
     font-size: larger;
-    z-index: 99;
+    z-index: 1;
+}
+.content-back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    font-size: larger;
+    z-index: 0;
 }
 
 @font-face {
