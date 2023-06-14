@@ -81,6 +81,10 @@ body {
 
   @media(max-width:800px){
     .toggler {
+        position: absolute;
         width: 30%;
+        right: 5%;
+        top: 20%;
     }
+
   }

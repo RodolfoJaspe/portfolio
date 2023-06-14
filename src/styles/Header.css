@@ -39,7 +39,6 @@ h1 {
   height: 10vw;
   margin: 4vw 0;
   transition: 1s;
-  /* background-color: lightseagreen; */
 }
 
 .h1-div2 {
@@ -48,7 +47,6 @@ h1 {
     align-items: center;
     padding: 1vw 2vw;
     transition: 1s;
-    /* background-color: lightseagreen; */
 }
 .slash {
     color:red;
@@ -226,124 +224,23 @@ h1 {
     .name {
         font-size: larger;
     }
+    .linkedin-icon {
+        transform: scale(3);
+        top: 5vw;
+        right: 5vw;
+    }
+    .github-icon {
+        transform: scale(3);
+        left: 4vw;
+        top: 4vw;
+    }
   }
 
-/* @media (max-width: 1000px) {
-  .header-nav {
-    margin-top: 0;
-    margin-bottom: 4vw;
-    font-size: 3vw;
-  }
-  .header-nav a:hover {
-    color: rgba(187, 107, 33, 0.856);
-    -webkit-transform: scale(1);
-    text-decoration: none;
-  }
-  .h1-div {
-    flex-direction: column;
-    height: 10vw;
-    margin-top: 10vw;
-  }
-
-  .h1-div2 {
-    margin-top: 10vw;
-  }
-
-  .name-title {
-    width: 100%;
-    justify-content: space-evenly;
-  }
-  .name {
-    display: flex;
-    width: 50%;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .name h1 {
-    font-size: 6vw;
-    margin: 0;
-    width: 26vw;
-  }
-
-  .title {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .title {
-    justify-content: center;
-    color: rgba(83, 149, 211, 0.753);
-    font-size: 3vw;
-    width: 100%;
-  }
-
-  .title:hover {
-    color: rgba(83, 149, 211, 0.753);
-    font-size: 3vw;
-  }
-
-  .linkedin-icon img {
-    width: 8vw;
-  }
-
-  .github-icon img:hover {
-    width: 9vw;
-  }
-  .github-icon img {
-    width: 8vw;
-  }
-
-  .linkedin-icon img:hover {
-    width: 9vw;
-  }
-
-  .skills-container {
-    width: 100%;
-  }
-  .skills-container h2 {
-    color: rgb(109, 0, 160);
-  }
-  .skills-inner .skills-title {
-    color: rgb(0, 255, 255);
-  }
-  .skills-inner h4 {
-    color: rgb(255, 255, 0);
-  }
-  .skills-inner p {
-    color: rgba(255, 93, 43, 0.842);
-  }
-} */
-
-/* @media (max-width: 800px) {
-  .h1-div {
-    height: 20vw;
-    margin-top: 20vw;
-  }
-  .h1-div2 {
-    margin-top: 15vw;
-  }
-  .name h1 {
-    font-size: 7vw;
-    width: 100%;
-  }
-
-} */
 
 @media (max-width: 500px) {
-  /* .header-nav {
-    font-size: 4vw;
-    margin-top: 4vw;
-  } */
-
   .h1-div {
     height: 100%;
   }
-
-  /* .h1-div2 {
-    margin-bottom: 90vw;
-  } */
 
   .name-title {
     margin-top: 10vh;
