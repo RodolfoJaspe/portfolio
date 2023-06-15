@@ -16,16 +16,6 @@ body {
     height: 100%;
 }
 
-.toggler {
-    height: 5%;
-    width: 5%;
-    position: fixed;
-    right: 5%;
-    top: 40%;
-    cursor: pointer;
-    z-index: 3;
-    text-align: center;
-}
 .toggler h2{
     color: rgb(217, 65, 31);
     cursor:default;
@@ -77,14 +67,4 @@ body {
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-  }
-
-  @media(max-width:800px){
-    .toggler {
-        position: absolute;
-        width: 30%;
-        right: 5%;
-        top: 20%;
-    }
-
   }

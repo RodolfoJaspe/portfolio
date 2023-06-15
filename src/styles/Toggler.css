@@ -1,0 +1,34 @@
+.toggler {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggler button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid rgb(175, 27, 27);
+    background-color: rgb(205, 205, 205);
+}
+
+.toggler button:hover {
+    background-color: white;
+}
+
+.toggler h2 {
+    color: rgb(175, 27, 27);
+    margin:0;
+}
+
+@media(max-width:800px){
+    .toggler {
+        right: 20px;
+    }
+}

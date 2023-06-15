@@ -1,6 +1,7 @@
 header {
   display: flex;
   flex-direction: column;
+  padding-bottom: 500px;
 }
 
 .header-nav {
@@ -256,5 +257,8 @@ h1 {
   }
   .slash {
     font-size: 12vw;
+  }
+  header {
+    padding-bottom: 200px;
   }
 }

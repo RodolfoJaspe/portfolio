@@ -31,16 +31,7 @@ function App() {
                 </Suspense>
                 </Canvas> 
             </div>
-            <div className='toggler'>
-               <Canvas>
-                <Suspense >
-                    <Toggler focus ={focus} setFocus={setFocus}/>
-                </Suspense>
-                </Canvas> 
-                <div>
-                    <h2>Toggle</h2>
-                </div>
-            </div>
+            <Toggler setFocus={setFocus} focus={focus}/>
         </div>
     )
 }

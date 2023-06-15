@@ -4,9 +4,6 @@ import "../styles/Projects.css";
 
 function Projects ({skillsState}) {
     return (
-        <div>
-            {/* <div className={skillsState?"projects-title-move":"projects-title"}>Projects
-            </div> */}
             <div className="projects-outer">
                 <div className="projects">                    
                     <iframe src ="https://rdgroup-usa.com/" title="RD Group Consulting">
@@ -37,7 +34,6 @@ function Projects ({skillsState}) {
                     <p>Expats document through images their experiences while living abroad</p>
                 </div>
             </div>
-        </div>
     )
 }
 
