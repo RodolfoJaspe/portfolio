@@ -173,6 +173,7 @@ h1 {
 
 .skills-inner p:hover {
   color: rgb(254, 59, 0);
+  font-weight: 500;
   transition: .5s;
 }
 

@@ -1,12 +1,11 @@
+import { Html, useProgress } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import React, { Suspense, useEffect, useState } from 'react';
-import { Html, useProgress } from '@react-three/drei'
+import React, { Suspense, useState } from 'react';
 import './App.css';
-import About from './components/About';
-import { Earth } from './components/earth';
 import Header from './components/Header';
 import Projects from './components/Projects';
 import { Toggler } from './components/Toggler';
+import { Earth } from './components/earth';
 
 function Loader() {
     const { progress } = useProgress()
@@ -22,7 +21,6 @@ function App() {
             <div className={!focus?'content':'content-back'}>
                 <Header focus={focus}/>
                 {!focus?<Projects />:null}
-                {/* {!focus?<About />:null} */}
             </div>
             <div className={focus?'globe':'globe-back'}>
                <Canvas>
