@@ -15,7 +15,7 @@ function Projects ({skillsState}) {
                     <iframe src ="https://dayanamorales.com" title="Dayana Morales Actress Portfolio">
                     </iframe>
                     <a href="https://dayanamorales.com" target='_blank'></a>
-                    <p>Actress Dayana Morales' portfolio page</p>
+                    <p>Portfolio page of Actress Dayana Morales</p>
                 </div>
                 <div className="projects">                    
                     <iframe src ="https://hilites.netlify.app/" title="latest soccer highlights">
