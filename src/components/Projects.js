@@ -26,7 +26,7 @@ function Projects ({skillsState}) {
                 <div className="projects">        
                     <iframe src ="https://toodue.netlify.app/" title="latest soccer highlights"></iframe>
                     <a href="https://toodue.netlify.app/" target='_blank'></a>         
-                    <p>Create a and save to do lists to an account</p>
+                    <p>Create and save lists to personal account</p>
                 </div>
             </div>
     )
