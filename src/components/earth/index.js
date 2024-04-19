@@ -1,14 +1,16 @@
 import React, { useRef } from "react";
 
-import EarthDayMap from '../../Assets/textures/8k_earth_daymap.jpg';
-import EarthCloudsMap from '../../Assets/textures/8k_earth_clouds.jpg'
-import EarthNightMap from '../../Assets/textures/8k_earth_nightmap.jpg'
-import EarthSpecularMap from '../../Assets/textures/8k_earth_specular_map.jpg'
-import EarthNormalMap from '../../Assets/textures/8k_earth_normal_map.jpg'
-import { useFrame, useLoader } from "@react-three/fiber";
-import { TextureLoader } from "three";
 import { OrbitControls, Stars } from "@react-three/drei";
+import { useFrame, useLoader } from "@react-three/fiber";
 import * as THREE from "three";
+import { TextureLoader } from "three";
+import EarthCloudsMap from '../../Assets/textures/8k_earth_clouds.jpg';
+import EarthDayMap from '../../Assets/textures/8k_earth_daymap.jpg';
+import EarthNightMap from '../../Assets/textures/8k_earth_nightmap.jpg';
+import EarthNormalMap from '../../Assets/textures/8k_earth_normal_map.jpg';
+import EarthSpecularMap from '../../Assets/textures/8k_earth_specular_map.jpg';
+
+
 
 
 export function Earth(props) {
@@ -28,10 +30,6 @@ export function Earth(props) {
         cloudsRef.current.rotation.x = window.scrollY / 10000
     })
 
-    console.log(window.innerWidth / 100)
-
-    
-
     return (
         <>
             <ambientLight intensity={0.1}/>
@@ -46,7 +44,7 @@ export function Earth(props) {
                 factor={7} 
                 fade={true}/>
             <mesh ref={cloudsRef} >
-                <sphereGeometry args={[2.501, 64, 64]} />
+                <sphereGeometry args={[1.501, 64, 64]} />
                 <meshPhongMaterial 
                     map={cloudsMap} 
                     opacity={.3} 
@@ -55,7 +53,7 @@ export function Earth(props) {
                     side={THREE.DoubleSide}/>
             </mesh>
             <mesh ref={earthRef} >
-                <sphereGeometry args={[2.5, 64 ,64]}/>
+                <sphereGeometry args={[1.5, 64 ,64]}/>
                 <meshPhongMaterial specularMap={specularMap}/>
                 <meshStandardMaterial 
                     map={colorMap} 
