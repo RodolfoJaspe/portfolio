@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/Header.css';
-import linkedIn from '../Assets/linkedin.png'
-import github from '../Assets/github.png'
 import { connect } from 'react-redux';
-import { showSkills } from '../actions'
+import { showSkills } from '../actions';
+import github from '../Assets/github.png';
+import linkedIn from '../Assets/linkedin.png';
+import '../styles/Header.css';
 
 function Header({skillsState, showSkills, focus}) {
 
@@ -34,7 +34,7 @@ function Header({skillsState, showSkills, focus}) {
                         Full Stack Developer
                     </div> */}
                 </div>
-                 {!focus?<div className='skills-container'>
+                 {/* {!focus?<div className='skills-container'>
                     <h2>{'{'}</h2>
                     <div className='skills-outer'>
                         <div className='skills-inner'>
@@ -46,7 +46,7 @@ function Header({skillsState, showSkills, focus}) {
                         </div>
                     </div>
                     <h2>{'}'}</h2>
-                </div>:null}
+                </div>:null} */}
             </div>
         </header>
     )

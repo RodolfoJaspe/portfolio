@@ -3,11 +3,11 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import React, { forwardRef, Suspense, useRef, useState } from 'react';
 import * as THREE from "three";
 import './App.css';
+import { Earth } from './components/earth';
 import Header from './components/Header';
 import Projects from './components/Projects';
+import Skills from "./components/Skills";
 import { Toggler } from './components/Toggler';
-import { Earth } from './components/earth';
-
 
 
 function Loader() {
@@ -59,7 +59,7 @@ const Airplane = forwardRef((props, ref) => {
 
 function App() {
 
-    const [focus , setFocus] = useState(false)
+    const [focus , setFocus] = useState(true)
 
     return (
         <div className='app'>
@@ -76,6 +76,7 @@ function App() {
                 </Suspense>
                 </Canvas> 
             </div>
+            <Skills focus={focus}/>
             <Toggler setFocus={setFocus} focus={focus}/>
         </div>
     )

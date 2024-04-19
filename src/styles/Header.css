@@ -80,12 +80,15 @@ h1 {
 }
 
 .skills-container {
+  position: absolute;
+  bottom: -450%;
   display: flex;
   flex-direction: column;
   opacity: 0.5;
   transition: 2s;
-  color: rgb(240, 240, 240);
+  color: white;
   width: 50%;
+  max-width: 500px;
 }
 
 .skills-outer {
@@ -132,29 +135,33 @@ h1 {
 }
 .skills-container h2 {
     transition: 0.5s;
+    color: rgb(109, 0, 160);
 }
 
 .skills-inner p {
   display: inline-block;
-  color: rgb(240, 240, 240);
+  color: rgb(184, 64, 27);
   margin: 0;
   transition: 0.5s;
 }
 
 .skills-inner h4 {
   display: inline-block;
-  color: rgb(240, 240, 240);
+  color: rgb(255, 255, 0);
+
   margin: 0;
   transition: 0.5s;
 }
 
 .skills-inner:hover p {
-  color: rgba(184, 64, 27, 0.8);
+  color: rgb(184, 64, 27);
   transition: 0.5s;
 }
 
 .skills-inner {
   transition: 0.5s;
+  font-weight: bolder;
+  line-height: 40px;
 }
 
 .skills-inner:hover .skills-title {
@@ -163,6 +170,7 @@ h1 {
 }
 
 .skills-inner .skills-title {
+    color: rgb(0, 255, 255);
   transition: 0.5s;
 }
 
@@ -173,7 +181,6 @@ h1 {
 
 .skills-inner p:hover {
   color: rgb(254, 59, 0);
-  font-weight: 500;
   transition: .5s;
 }
 
@@ -218,10 +225,28 @@ h1 {
     transition: 1s;
     cursor: pointer;
   }
+  @media(min-width:1400px) {
+    .skills-container {
+        bottom: -230vw;
+    }
+  }
+
+  @media(max-width:1400px) {
+    .skills-container {
+        bottom: -240vw;
+    }
+  }
+
+  @media(max-width:1100px) {
+    .skills-container {
+        bottom: -270vw;
+    }
+  }
 
   @media (max-width: 1000px) {
     .skills-container {
         width: 80%;
+        bottom: -300vw;
     }
     .name {
         font-size: larger;
@@ -238,8 +263,23 @@ h1 {
     }
   }
 
+@media(max-width: 800px) {
+    .skills-container {
+        bottom: -340vw;
+    }
+}
+
+@media(max-width: 650px) {
+    .skills-container {
+        bottom: -420vw;
+    }
+}
+
 
 @media (max-width: 500px) {
+    .skills-container {
+        bottom: -450vw;
+    }
   .h1-div {
     height: 100%;
   }
@@ -262,4 +302,10 @@ h1 {
   header {
     padding-bottom: 200px;
   }
+}
+
+@media (max-width: 400px) {
+    .skills-container {
+        bottom: -200%;
+    }
 }
