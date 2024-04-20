@@ -24,13 +24,12 @@ const Airplane = forwardRef((props, ref) => {
     
       const airplaneRef = useRef();
      
-    //   const position = useMemo(() => new THREE.Vector3(), []);
     
       useFrame(({ clock }) => {
         if (airplaneRef.current) {
         const elapsedTime = clock.getElapsedTime();
         const radius = r; // Distance from the Earth's center
-        const speed = 1; // Speed of revolution
+        const speed = .5; // Speed of revolution
         const x = radius * Math.cos(elapsedTime * speed);
         const y = radius * Math.sin(elapsedTime * speed);
         const z = radius * Math.sin(elapsedTime * speed);
@@ -65,18 +64,17 @@ function App() {
         <div className='app'>
             <div className={!focus?'content':'content-back'}>
                 <Header focus={focus}/>
-                {!focus?<Projects />:null}
+                {!focus?<div><Projects /><Skills/></div>:null}
             </div>
             <div className={focus?'globe':'globe-back'}>
                <Canvas>
                 <Suspense fallback={<Loader/>}>
                     <Earth />
-                    {/* <FlyingAirplane r={3}/> */}
-                    <FlyingAirplane r={4}/>  
+                    <FlyingAirplane r={3}/>
                 </Suspense>
                 </Canvas> 
             </div>
-            <Skills focus={focus}/>
+            
             <Toggler setFocus={setFocus} focus={focus}/>
         </div>
     )

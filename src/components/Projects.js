@@ -6,6 +6,12 @@ function Projects ({skillsState}) {
     return (
             <div className="projects-outer">
                 <div className="projects">              
+                    <iframe src ="https://zaniacsteam.com" title="Zaniac South Miami">
+                    </iframe>
+                    <a href="https://zaniacsteam.com" target='_blank'></a>
+                    <p>Zaniac, k-12 STEM Classes</p>
+                </div>
+                <div className="projects">              
                     <iframe src ="https://rdgroup-usa.com/" title="RD Group Consulting">
                     </iframe>
                     <a href="https://rdgroup-usa.com/" target='_blank'></a>
