@@ -9,7 +9,7 @@ function Projects ({skillsState}) {
                     <iframe src ="https://zaniacsteam.com" title="Zaniac South Miami">
                     </iframe>
                     <a href="https://zaniacsteam.com" target='_blank'></a>
-                    <p>Zaniac, k-12 STEM Classes</p>
+                    <p>Zaniac South Miami, k-12 STEM Classes</p>
                 </div>
                 <div className="projects">              
                     <iframe src ="https://rdgroup-usa.com/" title="RD Group Consulting">
@@ -32,7 +32,7 @@ function Projects ({skillsState}) {
                 <div className="projects">        
                     <iframe src ="https://toodue.netlify.app/" title="latest soccer highlights"></iframe>
                     <a href="https://toodue.netlify.app/" target='_blank'></a>         
-                    <p>Create and save lists to personal account</p>
+                    <p>Create and save to-do lists</p>
                 </div>
             </div>
     )

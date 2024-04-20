@@ -32,7 +32,7 @@ export function Earth(props) {
 
     return (
         <>
-            <ambientLight intensity={0.1}/>
+            <ambientLight intensity={.8}/>
             <pointLight 
                 color="#f6f3ea" 
                 position={[10, 2, 10]} 
