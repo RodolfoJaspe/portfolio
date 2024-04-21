@@ -15,9 +15,7 @@
 
 .projects p {
   text-align: center;
-  width: 50vw;
-  color: rgb(255, 240, 226);
-  /* background-color: red; */
+  margin: 10vh 0 5vh 0;
 }
 
 .projects-title {
@@ -43,12 +41,12 @@
 }
 
 .projects a {
-  font-family: GoodTimes;
-  font-size: 6vw;
-  color: rgb(255, 240, 226);
   text-decoration: none;
-  text-shadow: 2px 2px rgb(187, 107, 33);
+  color: rgb(255, 240, 226);
 }
+.projects a:hover {
+    color: rgb(184, 58, 27);
+  }
 
 .projects h3 {
   margin: 3vw;
