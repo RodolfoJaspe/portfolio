@@ -87,7 +87,7 @@ function App() {
                 <Suspense fallback={<Loader/>}>
                     <Earth />
                     <FlyingAirplane spd={.6} r={3.5} airplane={'/Assets/war_plane/scene.gltf'} scale={.5} path={1}/>
-                    <FlyingAirplane spd={.5} r={3.8} airplane={'/Assets/cartoon_airplane/scene.gltf'} scale={.02}path={2}/>
+                    <FlyingAirplane spd={.5} r={4.5} airplane={'/Assets/cartoon_airplane/scene.gltf'} scale={.02}path={2}/>
                     <FlyingAirplane spd={.8} r={4} airplane={'/Assets/curtis_airplane/scene.gltf'} scale={.003}path={1}/>
 
                 </Suspense>
