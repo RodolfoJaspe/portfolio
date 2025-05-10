@@ -2,7 +2,7 @@
 import { ArrowLeft, Eye, Github, Twitter } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-
+import { ProjectIframe } from "./iframe";
 type Props = {
 	project: {
 		url?: string;
@@ -26,7 +26,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 	}
 	if (project.url) {
 		links.push({
-			label: "Website",
+			label: "Visit Website",
 			href: project.url,
 		});
 	}
@@ -119,6 +119,11 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 							))}
 						</div>
 					</div>
+                    {project.url && (
+                    <div className="w-full mt-10">
+                        <ProjectIframe url={project.url} />
+                    </div>
+                    )}
 				</div>
 			</div>
 		</header>
