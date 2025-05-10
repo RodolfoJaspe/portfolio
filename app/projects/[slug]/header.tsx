@@ -3,6 +3,10 @@ import { ArrowLeft, Eye, Github, Twitter } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { ProjectIframe } from "./iframe";
+
+const TWITTER_HANDLE = process.env.NEXT_PUBLIC_TWITTER_HANDLE || "your_twitter_handle";
+const GITHUB_HANDLE = process.env.NEXT_PUBLIC_GITHUB_HANDLE || "your_github_handle";
+
 type Props = {
 	project: {
 		url?: string;
@@ -10,9 +14,9 @@ type Props = {
 		description: string;
 		repository?: string;
 	};
-
 	views: number;
 };
+
 export const Header: React.FC<Props> = ({ project, views }) => {
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
@@ -67,7 +71,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 								views,
 							)}
 						</span>
-						<Link target="_blank" href="https://twitter.com/chronark_">
+						<Link target="_blank" href={`https://twitter.com/${TWITTER_HANDLE}`}>
 							<Twitter
 								className={`w-6 h-6 duration-200 hover:font-medium ${
 									isIntersecting
@@ -76,7 +80,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 								} `}
 							/>
 						</Link>
-						<Link target="_blank" href="https://github.com/chronark">
+						<Link target="_blank" href={`https://github.com/${GITHUB_HANDLE}`}>
 							<Github
 								className={`w-6 h-6 duration-200 hover:font-medium ${
 									isIntersecting

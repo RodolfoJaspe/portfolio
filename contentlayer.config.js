@@ -50,6 +50,10 @@ export const Project = defineDocumentType(() => ({
 			required: false,
 			default: 999,
 		},
+		image: {
+			type: "string",
+			required: false,
+		},
 	},
 	computedFields,
 }));

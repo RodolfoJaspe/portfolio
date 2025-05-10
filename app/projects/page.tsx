@@ -1,6 +1,7 @@
 import { Redis } from "@upstash/redis";
 import { allProjects } from "contentlayer/generated";
 import { Eye } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { Card } from "../components/card";
 import { Navigation } from "../components/nav";
@@ -38,7 +39,7 @@ export default async function ProjectsPage() {
             Projects
           </h2>
           <p className="mt-4 text-zinc-400">
-            Some of the projects I've built 👷‍♂️ some I'm working on 🔧.
+            Some of the projects I've built 👷🏻‍♂️ some I'm working on 🔧.
           </p>
         </div>
         <div className="w-full h-px bg-zinc-800" />
@@ -47,40 +48,42 @@ export default async function ProjectsPage() {
           <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
             <Card>
               <Link href={`/projects/${featured.slug}`}>
-                <article className="relative w-full h-full p-4 md:p-8">
-                  <div className="flex items-center justify-between gap-2">
-                    <div className="text-xs text-zinc-100">
-                      {featured.date ? (
-                        <time dateTime={new Date(featured.date).toISOString()}>
-                          {Intl.DateTimeFormat(undefined, {
-                            dateStyle: "medium",
-                          }).format(new Date(featured.date))}
-                        </time>
-                      ) : (
-                        <span>SOON</span>
-                      )}
+                <article className="relative w-full h-full p-4 md:p-8 group">
+                  {featured.image && (
+                    <div className="absolute inset-0 opacity-20 transition-opacity group-hover:opacity-40">
+                      <Image
+                        src={featured.image}
+                        alt={featured.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
                     </div>
-                    <span className="flex items-center gap-1 text-xs text-zinc-500">
-                      <Eye className="w-4 h-4" />{" "}
-                      {Intl.NumberFormat("en-US", { notation: "compact" }).format(
-                        views[featured.slug] ?? 0,
-                      )}
-                    </span>
-                  </div>
+                  )}
+                  <div className="relative z-10">
+                    <div className="flex justify-end gap-2 items-center">
+                      <span className="flex items-center gap-1 text-xs text-zinc-500">
+                        <Eye className="w-4 h-4" />{" "}
+                        {Intl.NumberFormat("en-US", { notation: "compact" }).format(
+                          views[featured.slug] ?? 0,
+                        )}
+                      </span>
+                    </div>
 
-                  <h2
-                    id="featured-post"
-                    className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
-                  >
-                    {featured.title}
-                  </h2>
-                  <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
-                    {featured.description}
-                  </p>
-                  <div className="absolute bottom-4 md:bottom-8">
-                    <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
-                      Read more <span aria-hidden="true">&rarr;</span>
+                    <h2
+                      id="featured-post"
+                      className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
+                    >
+                      {featured.title}
+                    </h2>
+                    <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
+                      {featured.description}
                     </p>
+                    {/* <div className="absolute bottom-4 md:bottom-8">
+                      <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
+                        Read more <span aria-hidden="true">&rarr;</span>
+                      </p>
+                    </div> */}
                   </div>
                 </article>
               </Link>
