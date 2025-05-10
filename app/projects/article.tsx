@@ -11,19 +11,20 @@ type Props = {
 export const Article: React.FC<Props> = ({ project, views }) => {
 	return (
 		<Link href={`/projects/${project.slug}`}>
-			<article className="relative p-4 md:p-8 group">
+			<article className="relative p-4 md:p-8 group h-full">
 				{project.image && (
-					<div className="absolute inset-0 opacity-20 transition-opacity group-hover:opacity-40">
+					<div className="absolute inset-0 opacity-20 transition-opacity group-hover:opacity-40 overflow-hidden">
 						<Image
 							src={project.image}
 							alt={project.title}
 							fill
-							className="object-cover"
+							className="object-cover w-full h-full"
 							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							priority
 						/>
 					</div>
 				)}
-				<div className="relative z-10">
+				<div className="relative z-10 h-full">
 					<div className="flex justify-end gap-2 items-center">
 						<span className="text-zinc-500 text-xs flex items-center gap-1">
 							<Eye className="w-4 h-4" />{" "}

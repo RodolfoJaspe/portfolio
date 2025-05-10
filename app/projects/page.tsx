@@ -50,17 +50,18 @@ export default async function ProjectsPage() {
               <Link href={`/projects/${featured.slug}`}>
                 <article className="relative w-full h-full p-4 md:p-8 group">
                   {featured.image && (
-                    <div className="absolute inset-0 opacity-20 transition-opacity group-hover:opacity-40">
+                    <div className="absolute inset-0 opacity-20 transition-opacity group-hover:opacity-40 overflow-hidden">
                       <Image
                         src={featured.image}
                         alt={featured.title}
                         fill
-                        className="object-cover"
+                        className="object-cover w-full h-full"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        priority
                       />
                     </div>
                   )}
-                  <div className="relative z-10">
+                  <div className="relative z-10 h-full">
                     <div className="flex justify-end gap-2 items-center">
                       <span className="flex items-center gap-1 text-xs text-zinc-500">
                         <Eye className="w-4 h-4" />{" "}
