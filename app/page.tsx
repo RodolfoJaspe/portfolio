@@ -5,6 +5,7 @@ import Particles from "./components/particles";
 const navigation = [
   { name: "Projects", href: "/projects" },
   { name: "Contact", href: "/contact" },
+  { name: "About me", href: "/about" },
 ];
 
 export default function Home() {
@@ -29,7 +30,7 @@ export default function Home() {
         quantity={100}
       />
       <div className="flex justify-center items-center gap-2 sm:gap-8 flex-wrap sm:flex-nowrap">
-        <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-7xl xl:text-9xl whitespace-nowrap bg-clip-text">
+        <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-gradient-to-r from-zinc-100 to-zinc-500 bg-clip-text cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-7xl xl:text-9xl whitespace-nowrap">
           Hi, I'm Rodolfo
         </h1>
       </div>

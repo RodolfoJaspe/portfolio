@@ -6,9 +6,15 @@ module.exports = {
 		"./app/**/*.{js,ts,jsx,tsx}",
 		"./mdx-components.tsx",
 		"content/**/*.mdx",
+		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
+		"./components/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 
 	theme: {
+		screens: {
+			'xs': '400px',
+			...defaultTheme.screens,
+		},
 		extend: {
 			typography: {
 				DEFAULT: {
@@ -41,6 +47,10 @@ module.exports = {
 				title: "title 3s ease-out forwards",
 				"fade-left": "fade-left 3s ease-in-out forwards",
 				"fade-right": "fade-right 3s ease-in-out forwards",
+				"roll-in": "roll-in 3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards",
+				"roll-in-delayed": "roll-in 3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards .1s",
+				"fade-in-delayed": "fade-in 2s ease-in-out forwards 1s",
+				"fade-in-delayed-extra": "fade-in 2s ease-in-out forwards 3.6s",
 			},
 			keyframes: {
 				"fade-in": {
@@ -99,6 +109,19 @@ module.exports = {
 					"100%": {
 						"line-height": "100%",
 						opacity: "100%",
+					},
+				},
+				"roll-in": {
+					"0%": {
+						transform: "translateX(-100vw) rotate(-360deg)",
+						opacity: "0",
+					},
+					"20%": {
+						opacity: "1",
+					},
+					"100%": {
+						transform: "translateX(0) rotate(0deg)",
+						opacity: "1",
 					},
 				},
 			},
