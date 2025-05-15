@@ -54,6 +54,11 @@ export const Project = defineDocumentType(() => ({
 			type: "string",
 			required: false,
 		},
+		projectType: {
+			type: "enum",
+			options: ["website", "webgame", "webapp"],
+			required: true,
+		},
 	},
 	computedFields,
 }));
