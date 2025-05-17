@@ -65,9 +65,9 @@ export const Card: React.FC<CardProps> = ({ children, className = "", featured =
 		<div
 			ref={cardRef}
 			onMouseMove={onMouseMove}
-			className={`overflow-hidden relative duration-700 border-2 rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-red-950 border-zinc-500 ${className} ${
+			className={`overflow-hidden relative duration-700 border-2 rounded-xl hover:bg-zinc-800/10 group md:gap-8  border-zinc-500 ${className} ${
 				isFirst ? "h-[300px] md:h-[440px] md:row-span-2" : "h-[150px] md:h-[200px]"
-			} ${isInMiddle ? 'border-red-950' : ''}`}
+			} `}
 		>
 			<div className="pointer-events-none">
 				<div className="absolute inset-0 z-0 transition duration-1000 [mask-image:linear-gradient(black,transparent)]" />
