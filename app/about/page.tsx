@@ -13,16 +13,41 @@ export default function About() {
           About me
         </h1>
         <p className="text-lg opacity-0 animate-fade-in-delayed text-zinc-300 text-center">
-          I'm a software developer obsessed with building <Link href="/projects" className=" text-sky-400 hover:text-sky-300 transition-colors">stuff</Link>
+          I'm a software developer obsessed with building  
+          <Link href="/projects" className="ml-1 text-sky-400 hover:text-sky-300 transition-colors">stuff</Link>
         </p>
         <br/>
+
+
+        <ExperienceSection
+          title="Software Development Journey"
+          description="My formal journey into software development began at Bloom Institute of Technology, where I immersed myself in web development through their intensive program. The curriculum emphasized real-world application through project-based learning and daily standup meetings with cross-functional teams and stakeholders. This experience taught me the importance of agile methodologies, effective communication, and collaborative problem-solving in software development. Since graduation, I've continued to expand my technical expertise and stay current with modern web technologies."
+          images={[
+            'tech1', 'tech2', 'tech3', 'tech4', 'tech5', 'tech6', 
+            'tech7', 'tech8', 'tech9', 'tech10', 'tech11', 'tech12',
+            'tech13', 'tech14'
+          ]}
+          skills={[
+            'HTML5 & CSS3',
+            'JavaScript (ES6+)',
+            'React.js',
+            'Next.js',
+            'TypeScript',
+            'Git & GitHub',
+            'Agile Methodologies',
+            'Team Collaboration',
+            'Problem Solving',
+            'Technical Documentation'
+          ]}
+          delay={0.2}
+        />
+        
         <p className="text-lg animate-fade-in-delayed-extra opacity-0 text-zinc-300 text-center">but that's not even half of it</p>
         <br/>
         
         <p className="text-lg opacity-0 animate-fade-in-delayed-extra-extra text-zinc-300 text-center max-w-2xl mx-auto mb-16">
           My journey through different careers has equipped me with valuable skills that make me a stronger developer and team member.
         </p>
-
         <ExperienceSection
           title="Coding & STEM Education"
           description="As a coding & STEM teacher across multiple prestigious schools in Miami, I've developed the ability to break down complex concepts into digestible lessons, adapt my teaching style to different learning needs, and foster a collaborative learning environment. This experience has enhanced my communication skills and deepened my understanding of programming fundamentals."
@@ -34,7 +59,7 @@ export default function About() {
             'Mentorship',
             'Knowledge Transfer'
           ]}
-          delay={5}
+          delay={0.4}
         />
 
         <ExperienceSection

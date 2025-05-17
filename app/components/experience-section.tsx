@@ -13,6 +13,8 @@ interface ExperienceSectionProps {
 }
 
 export function ExperienceSection({ title, description, images, skills, delay = 0 }: ExperienceSectionProps) {
+  const isTechSection = images[0]?.startsWith('tech');
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -22,7 +24,7 @@ export function ExperienceSection({ title, description, images, skills, delay = 
     >
       <Card className="p-6 md:p-8" isAbout>
         <div className="flex flex-col md:flex-row gap-8">
-          <div className="flex-1">
+          <div className="flex-[0.6]">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-zinc-100 to-zinc-500 bg-clip-text text-transparent">
               {title}
             </h2>
@@ -38,7 +40,7 @@ export function ExperienceSection({ title, description, images, skills, delay = 
               ))}
             </div>
           </div>
-          <div className="flex-1 grid grid-cols-2 gap-4">
+          <div className={`flex-[0.4] grid ${isTechSection ? 'grid-cols-3 sm:grid-cols-5 gap-2' : 'grid-cols-2 gap-4'}`}>
             {images.map((image, index) => (
               <div
                 key={index}
