@@ -35,6 +35,7 @@ export const Card: React.FC<CardProps> = ({ children, className = "", featured =
 		>
 			<div className="pointer-events-none">
 				<div className="absolute inset-0 z-0 transition duration-1000 [mask-image:linear-gradient(black,transparent)]" />
+				<div className="absolute inset-0 z-10 bg-zinc-800/80 transition-opacity duration-500 group-hover:opacity-40" />
 				<motion.div
 					className="absolute inset-0 z-10 bg-gradient-to-br opacity-0 via-zinc-100/10 transition duration-1000 group-hover:opacity-100"
 					style={style}

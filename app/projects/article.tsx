@@ -13,7 +13,7 @@ export const Article: React.FC<Props> = ({ project, views }) => {
 		<Link href={`/projects/${project.slug}`}>
 			<article className="relative p-4 md:p-8 group h-full">
 				{project.image && (
-					<div className="absolute inset-0 opacity-20 transition-opacity group-hover:opacity-40 overflow-hidden">
+					<div className="absolute inset-0 opacity-100 transition-opacity overflow-hidden">
 						<Image
 							src={project.image}
 							alt={project.title}
