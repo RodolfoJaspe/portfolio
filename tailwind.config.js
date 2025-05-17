@@ -50,8 +50,8 @@ module.exports = {
 				"roll-in": "roll-in 3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards",
 				"roll-in-delayed": "roll-in 3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards .1s",
 				"fade-in-delayed": "fade-in 2s ease-in-out forwards 1s",
-				"fade-in-delayed-extra": "fade-in 2s ease-in-out forwards 3.6s",
-				"fade-in-delayed-extra-extra": "fade-in 2s ease-in-out forwards 5.6s",
+				"fade-in-delayed-extra": "fade-in 2s ease-in-out forwards 2.5s",
+				"fade-in-delayed-extra-extra": "fade-in 2s ease-in-out forwards 3.5s",
 			},
 			keyframes: {
 				"fade-in": {

@@ -26,7 +26,7 @@ export const Navigation: React.FC = () => {
 						: "bg-zinc-900/500  border-zinc-800 "
 				}`}
 			>
-				<div className="container flex flex-row-reverse items-center justify-between pt-6 px-2 xs:p-6 mx-auto text-[5.5vw] xs:text-base">
+				<div className="w-full max-w-[1580px] flex flex-row-reverse items-center justify-between py-6 px-2 xs:px-6 mx-auto text-[5.5vw] xs:text-base">
 					<div className="flex justify-between gap-2 xs:gap-4 sm:gap-8">
 						<Link
 							href="/projects"

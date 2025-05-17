@@ -28,11 +28,11 @@ export function ExperienceSection({ title, description, images, skills, delay = 
   const renderImages = () => {
     if (isTechSection) {
       return (
-        <div className="grid grid-cols-5 gap-2">
+        <div className="grid grid-cols-5 xs:grid-cols-7 gap-2 flex-[0.4]">
           {images.map((image, index) => (
             <div
               key={index}
-              className="relative aspect-square rounded-lg overflow-hidden cursor-pointer"
+              className="relative aspect-square max-w-[100px] rounded-lg overflow-hidden cursor-pointer"
               onClick={() => handleImageClick(index)}
             >
               <Image
@@ -111,8 +111,8 @@ export function ExperienceSection({ title, description, images, skills, delay = 
       className="w-full mb-16"
     >
       <Card className="p-4 xs:p-6 md:p-8" isAbout>
-        <div className="flex flex-col lg:flex-row gap-8">
-          <div className="flex-[0.5]">
+        <div className={`flex flex-col ${!isTechSection && 'lg:flex-row'} gap-8`}>
+          <div className={`${isTechSection ? 'w-full' : 'flex-[0.5]'}`}>
             <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-zinc-100 to-zinc-500 bg-clip-text text-transparent">
               {title}
             </h2>
@@ -128,7 +128,7 @@ export function ExperienceSection({ title, description, images, skills, delay = 
               ))}
             </div>
           </div>
-          <div className="flex-[0.5]">
+          <div className={`${isTechSection ? 'w-full' : 'flex-[0.5]'}`}>
             {renderImages()}
           </div>
         </div>

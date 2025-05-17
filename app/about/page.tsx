@@ -10,12 +10,12 @@ export default function About() {
       <AnimatedImage />
       <div className="w-full px-4 py-16">
         <div className="max-w-[1200px] mx-auto">
-          <h1 className="text-4xl font-bold animate-fade-in-delayed opacity-0 bg-gradient-to-r from-zinc-100 to-zinc-500 bg-clip-text text-transparent text-center mb-16">
+          <h1 className="text-4xl font-bold animate-fade-in-delayed opacity-0 bg-gradient-to-r from-zinc-100 to-zinc-500 bg-clip-text text-transparent text-center mb-12">
             About me
           </h1>
           <p className="text-lg opacity-0 animate-fade-in-delayed text-zinc-300 text-center">
-            I'm a software developer obsessed with building  
-            <Link href="/projects" className="ml-1 text-sky-400 hover:text-sky-300 transition-colors">stuff</Link>
+            I'm a software developer obsessed with building 
+            <Link href="/projects" className="ml-1 text-sky-400 hover:text-sky-300 transition-colors">things</Link>
           </p>
           <br/>
 
@@ -23,7 +23,7 @@ export default function About() {
           <br/>
           
           <p className="text-lg opacity-0 animate-fade-in-delayed-extra-extra text-zinc-300 text-center max-w-2xl mx-auto mb-16">
-            My journey through different careers has equipped me with valuable skills that make me a stronger developer and team member.
+            My experiences through different careers have equipped me with valuable skills that make me a stronger developer and team member.
           </p>
 
           <ExperienceSection
@@ -35,18 +35,12 @@ export default function About() {
               'tech13', 'tech14'
             ]}
             skills={[
-              'HTML5 & CSS3',
-              'JavaScript (ES6+)',
-              'React.js',
-              'Next.js',
-              'TypeScript',
-              'Git & GitHub',
               'Agile Methodologies',
               'Team Collaboration',
               'Problem Solving',
               'Technical Documentation'
             ]}
-            delay={0.2}
+            delay={5.5}
           />
           
           <ExperienceSection
@@ -60,7 +54,7 @@ export default function About() {
               'Mentorship',
               'Knowledge Transfer'
             ]}
-            delay={0.4}
+            delay={5.5}
           />
 
           <ExperienceSection
@@ -74,7 +68,7 @@ export default function About() {
               'Emotional Intelligence',
               'Creative Problem Solving'
             ]}
-            delay={0.4}
+            delay={5.5}
           />
 
           <ExperienceSection
@@ -88,7 +82,7 @@ export default function About() {
               'Attention to Detail',
               'Service Excellence'
             ]}
-            delay={0.6}
+            delay={5.5}
           />
         </div>
       </div>
