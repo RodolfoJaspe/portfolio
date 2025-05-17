@@ -11,9 +11,10 @@ interface CardProps extends PropsWithChildren {
 	featured?: boolean;
 	isFirst?: boolean;
 	isContact?: boolean;
+	isAbout?: boolean;
 }
 
-export const Card: React.FC<CardProps> = ({ children, className = "", featured = false, isFirst = false, isContact = false }) => {
+export const Card: React.FC<CardProps> = ({ children, className = "", featured = false, isFirst = false, isContact = false, isAbout = false }) => {
 	const mouseX = useSpring(0, { stiffness: 500, damping: 100 });
 	const mouseY = useSpring(0, { stiffness: 500, damping: 100 });
 	const cardRef = useRef<HTMLDivElement>(null);
@@ -69,6 +70,7 @@ export const Card: React.FC<CardProps> = ({ children, className = "", featured =
 			className={`overflow-hidden relative duration-700 border-2 rounded-xl hover:bg-zinc-800/10 group md:gap-8  border-zinc-500 ${className} ${
 				isContact ? "h-[220px] sm:h-[240px] md:h-[500px] text-center" :
 				isFirst ? "h-[300px] md:h-[440px] md:row-span-2" : 
+				isAbout ? "h-auto" :
 				"h-[150px] md:h-[200px]"
 			} `}
 		>
