@@ -30,12 +30,12 @@ export const Card: React.FC<CardProps> = ({ children, className = "", featured =
 			ref={cardRef}
 			onMouseMove={onMouseMove}
 			className={`overflow-hidden relative duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600 ${className} ${
-				isFirst ? "h-[300px] md:h-auto md:row-span-2" : "h-[150px]"
+				isFirst ? "h-[300px] md:h-[440px] md:row-span-2" : "h-[150px] md:h-[200px]"
 			}`}
 		>
 			<div className="pointer-events-none">
 				<div className="absolute inset-0 z-0 transition duration-1000 [mask-image:linear-gradient(black,transparent)]" />
-				<div className="absolute inset-0 z-10 bg-zinc-800/80 transition-opacity duration-500 group-hover:opacity-40" />
+				<div className="absolute inset-0 z-10 bg-zinc-800/80 transition-opacity duration-500 group-hover:opacity-60" />
 				<motion.div
 					className="absolute inset-0 z-10 bg-gradient-to-br opacity-0 via-zinc-100/10 transition duration-1000 group-hover:opacity-100"
 					style={style}
