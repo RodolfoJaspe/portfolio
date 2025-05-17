@@ -10,9 +10,10 @@ interface CardProps extends PropsWithChildren {
 	className?: string;
 	featured?: boolean;
 	isFirst?: boolean;
+	isContact?: boolean;
 }
 
-export const Card: React.FC<CardProps> = ({ children, className = "", featured = false, isFirst = false }) => {
+export const Card: React.FC<CardProps> = ({ children, className = "", featured = false, isFirst = false, isContact = false }) => {
 	const mouseX = useSpring(0, { stiffness: 500, damping: 100 });
 	const mouseY = useSpring(0, { stiffness: 500, damping: 100 });
 	const cardRef = useRef<HTMLDivElement>(null);
@@ -66,7 +67,9 @@ export const Card: React.FC<CardProps> = ({ children, className = "", featured =
 			ref={cardRef}
 			onMouseMove={onMouseMove}
 			className={`overflow-hidden relative duration-700 border-2 rounded-xl hover:bg-zinc-800/10 group md:gap-8  border-zinc-500 ${className} ${
-				isFirst ? "h-[300px] md:h-[440px] md:row-span-2" : "h-[150px] md:h-[200px]"
+				isFirst ? "h-[300px] md:h-[440px] md:row-span-2" : 
+				isContact ? "h-[200px] md:h-[300px]" :
+				"h-[200px] sm:h-[300px] md:h-[400px]"
 			} `}
 		>
 			<div className="pointer-events-none">
