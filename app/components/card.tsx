@@ -67,9 +67,9 @@ export const Card: React.FC<CardProps> = ({ children, className = "", featured =
 			ref={cardRef}
 			onMouseMove={onMouseMove}
 			className={`overflow-hidden relative duration-700 border-2 rounded-xl hover:bg-zinc-800/10 group md:gap-8  border-zinc-500 ${className} ${
+				isContact ? "h-[220px] sm:h-[240px] md:h-[500px] text-center" :
 				isFirst ? "h-[300px] md:h-[440px] md:row-span-2" : 
-				isContact ? "h-[200px] md:h-[300px]" :
-				"h-[200px] sm:h-[300px] md:h-[400px]"
+				"h-[150px] md:h-[200px]"
 			} `}
 		>
 			<div className="pointer-events-none">
