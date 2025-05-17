@@ -49,21 +49,19 @@ export default async function ProjectsPage() {
         {projectsByType.website.length > 0 && (
           <div className="space-y-8">
             <h3 className="text-2xl font-bold text-zinc-300">Websites 💻</h3>
-            <div className="grid grid-cols-1 gap-8 mx-auto lg:mx-0 md:grid-cols-2">
+            <div className="flex flex-col gap-8 md:grid md:grid-cols-2 md:grid-rows-2 mx-auto lg:mx-0">
               {/* Featured project */}
               {projectsByType.website.length > 0 && (
-                <Card className="md:col-span-1">
+                <Card isFirst>
                   <Article project={projectsByType.website[0]} views={views[projectsByType.website[0].slug] ?? 0} />
                 </Card>
               )}
               {/* Remaining projects */}
-              <div className="flex flex-col gap-4">
-                {projectsByType.website.slice(1).map((project) => (
-                  <Card key={project.slug}>
-                    <Article project={project} views={views[project.slug] ?? 0} />
-                  </Card>
-                ))}
-              </div>
+              {projectsByType.website.slice(1).map((project) => (
+                <Card key={project.slug}>
+                  <Article project={project} views={views[project.slug] ?? 0} />
+                </Card>
+              ))}
             </div>
           </div>
         )}
@@ -73,21 +71,19 @@ export default async function ProjectsPage() {
         {projectsByType.webgame.length > 0 && (
           <div className="space-y-8">
             <h3 className="text-2xl font-bold text-zinc-300">Web Games 🎮</h3>
-            <div className="grid grid-cols-1 gap-8 mx-auto lg:mx-0 md:grid-cols-2">
+            <div className="flex flex-col gap-8 md:grid md:grid-cols-2 md:grid-rows-2 mx-auto lg:mx-0">
               {/* Featured project */}
               {projectsByType.webgame.length > 0 && (
-                <Card className="md:col-span-1">
+                <Card isFirst>
                   <Article project={projectsByType.webgame[0]} views={views[projectsByType.webgame[0].slug] ?? 0} />
                 </Card>
               )}
               {/* Remaining projects */}
-              <div className="flex flex-col gap-4">
-                {projectsByType.webgame.slice(1).map((project) => (
-                  <Card key={project.slug}>
-                    <Article project={project} views={views[project.slug] ?? 0} />
-                  </Card>
-                ))}
-              </div>
+              {projectsByType.webgame.slice(1).map((project) => (
+                <Card key={project.slug}>
+                  <Article project={project} views={views[project.slug] ?? 0} />
+                </Card>
+              ))}
             </div>
           </div>
         )}
@@ -96,21 +92,19 @@ export default async function ProjectsPage() {
         {projectsByType.webapp.length > 0 && (
           <div className="space-y-8">
             <h3 className="text-2xl font-bold text-zinc-300">Web Apps 📱</h3>
-            <div className="grid grid-cols-1 gap-8 mx-auto lg:mx-0 md:grid-cols-2">
+            <div className="flex flex-col gap-8 md:grid md:grid-cols-2 md:grid-rows-2 mx-auto lg:mx-0">
               {/* Featured project */}
               {projectsByType.webapp.length > 0 && (
-                <Card className="md:col-span-1">
+                <Card isFirst>
                   <Article project={projectsByType.webapp[0]} views={views[projectsByType.webapp[0].slug] ?? 0} />
                 </Card>
               )}
               {/* Remaining projects */}
-              <div className="flex flex-col gap-4">
-                {projectsByType.webapp.slice(1).map((project) => (
-                  <Card key={project.slug}>
-                    <Article project={project} views={views[project.slug] ?? 0} />
-                  </Card>
-                ))}
-              </div>
+              {projectsByType.webapp.slice(1).map((project) => (
+                <Card key={project.slug}>
+                  <Article project={project} views={views[project.slug] ?? 0} />
+                </Card>
+              ))}
             </div>
           </div>
         )}
