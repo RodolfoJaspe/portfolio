@@ -76,7 +76,11 @@ export const Card: React.FC<CardProps> = ({ children, className = "", featured =
 		>
 			<div className="pointer-events-none">
 				<div className="absolute inset-0 z-0 transition duration-1000 [mask-image:linear-gradient(black,transparent)]" />
-				<div className={`absolute inset-0 z-10 bg-black/95 transition-opacity duration-500 ${isInMiddle ? 'opacity-60' : 'opacity-90'} md:opacity-90 md:group-hover:opacity-60`} />
+				<div className={`absolute inset-0 z-10 bg-black/95 transition-opacity duration-500 ${
+					isAbout 
+						? 'opacity-20' 
+						: `${isInMiddle ? 'opacity-60' : 'opacity-90'} md:opacity-90 md:group-hover:opacity-60`
+				}`} />
 				<motion.div
 					className="absolute inset-0 z-10 bg-gradient-to-br opacity-0 via-zinc-100/10 transition duration-1000 group-hover:opacity-100"
 					style={style}
