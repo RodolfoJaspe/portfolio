@@ -27,10 +27,10 @@ const socials = [
 
 export default function Contact() {
 	return (
-		<div className="bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0 h-screen">
+		<div className="bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0 h-full">
 			<Navigation />
-            <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
-                <div className="mx-auto lg:mx-0 md:space-y-4 border-b border-zinc-800 pb-16">
+            <div className="px-6 pt-20 mx-auto mb-0 max-w-7xl lg:px-8 md:pt-24 lg:pt-32">
+                <div className="mx-auto lg:mx-0 md:space-y-4 border-b border-zinc-800 pb-16 mb-16">
                     <h2 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-zinc-100 to-zinc-900 bg-clip-text text-transparent sm:text-4xl">
                         Contact
                     </h2>
@@ -39,7 +39,7 @@ export default function Contact() {
                     </p>
                     
                 </div>
-                <div className="container flex items-center justify-center px-4 mx-auto mt-20 ">
+                <div className="container flex items-center justify-center px-4 mx-auto mt-20 border-b border-zinc-800 pb-16">
                     <div className="grid w-full grid-cols-1 gap-8 mx-auto sm:mt-0 sm:grid-cols-3 lg:gap-16">
                         {socials.map((s) => (
                             <Card isContact>

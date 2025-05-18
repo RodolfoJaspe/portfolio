@@ -40,7 +40,7 @@ export default function About() {
               'Problem Solving',
               'Technical Documentation'
             ]}
-            delay={5.5}
+            delay={5}
           />
           
           <ExperienceSection
@@ -54,7 +54,7 @@ export default function About() {
               'Mentorship',
               'Knowledge Transfer'
             ]}
-            delay={5.5}
+            delay={5}
           />
 
           <ExperienceSection
@@ -68,7 +68,7 @@ export default function About() {
               'Emotional Intelligence',
               'Creative Problem Solving'
             ]}
-            delay={5.5}
+            delay={5}
           />
 
           <ExperienceSection
@@ -82,7 +82,7 @@ export default function About() {
               'Attention to Detail',
               'Service Excellence'
             ]}
-            delay={5.5}
+            delay={5}
           />
         </div>
       </div>
