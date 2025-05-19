@@ -59,7 +59,7 @@ export default function About() {
 
           <ExperienceSection
             title="Acting & Theater"
-            description="My experience in theater and acting has been instrumental in developing my presentation skills, emotional intelligence, and ability to work under pressure. From performing in productions like 'Que Pasa USA' to working with renowned actors, I've learned the importance of timing, precision, and the power of effective communication."
+            description="My experience in theater and acting has been instrumental in developing my presentation skills, emotional intelligence, and ability to work under pressure. From performing in productions like 'Que Pasa USA' to working with renowned actors, I've learned the importance of timing, active listening, and the power of effective communication."
             images={['acting1', 'acting2', 'acting3', 'acting4']}
             skills={[
               'Public Speaking',
@@ -73,14 +73,15 @@ export default function About() {
 
           <ExperienceSection
             title="Hospitality & Service"
-            description="Working in fast-paced environments like Estefan Kitchen and Segafredo Zanetti has taught me the value of exceptional customer service, quick thinking, and maintaining composure under pressure. These skills translate directly to software development, where user experience and efficient problem-solving are paramount."
+            description="Working in fast-paced environments like Estefan Kitchen and Segafredo Zanetti has taught me the value of exceptional customer service, task prioritization, and maintaining composure under pressure. These skills translate directly to software development, where user experience and efficient problem-solving are paramount."
             images={['bartending1', 'bartending2']}
             skills={[
               'Customer Focus',
               'Time Management',
               'Stress Management',
               'Attention to Detail',
-              'Service Excellence'
+              'Service Excellence',
+              'Multi-tasking'
             ]}
             delay={5}
           />
