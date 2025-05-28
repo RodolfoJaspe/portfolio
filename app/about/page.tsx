@@ -23,7 +23,7 @@ export default function About() {
           <br/>
           
           <p className="text-lg opacity-0 animate-fade-in-delayed-extra-extra text-zinc-300 text-center max-w-2xl mx-auto mb-16">
-            My experiences through different careers have equipped me with valuable skills that make me a stronger developer and team member.
+            My experiences through different careers have given me valuable skills that make me a stronger developer and team member.
           </p>
 
           <ExperienceSection
@@ -45,7 +45,7 @@ export default function About() {
           
           <ExperienceSection
             title="Coding & STEM Education"
-            description="As a coding & STEM teacher across multiple prestigious schools in Miami, I've developed the ability to break down complex concepts into digestible lessons, adapt my teaching style to different learning needs, and foster a collaborative learning environment. This experience has enhanced my communication skills and deepened my understanding of programming fundamentals."
+            description="As a coding & STEM teacher across multiple prestigious schools in Miami, I've developed the ability to break down complex concepts into digestible lessons, adapt my teaching style to different learning needs, encouraging a collaborative learning environment. This experience has enhanced my communication skills and deepened my understanding of programming fundamentals."
             images={['teaching1', 'teaching2', 'teaching3','teaching4']}
             skills={[
               'Technical Communication',
@@ -59,7 +59,7 @@ export default function About() {
 
           <ExperienceSection
             title="Acting & Theater"
-            description="My experience in theater and acting has been instrumental in developing my presentation skills, emotional intelligence, and ability to work under pressure. From performing in productions like 'Que Pasa USA' to working with renowned actors, I've learned the importance of timing, active listening, and the power of effective communication."
+            description="My experience in theater and acting has been instrumental in developing my presentation skills, emotional intelligence, teamwork, and ability to work under pressure. From performing in productions like 'Que Pasa USA' to working with renowned actors, I've learned the importance of timing, active listening, and the power of effective communication."
             images={['acting1', 'acting2', 'acting3', 'acting4']}
             skills={[
               'Public Speaking',
@@ -73,7 +73,7 @@ export default function About() {
 
           <ExperienceSection
             title="Hospitality & Service"
-            description="Working in fast-paced environments like Estefan Kitchen and Segafredo Zanetti has taught me the value of exceptional customer service, task prioritization, and maintaining composure under pressure. These skills translate directly to software development, where user experience and efficient problem-solving are paramount."
+            description="Working in fast-paced environments like Estefan Kitchen and Segafredo Zanetti has taught me the value of exceptional customer service, task prioritization, and maintaining composure under pressure. These skills translate directly to software development, where user experience and efficient problem-solving are essential."
             images={['bartending1', 'bartending2']}
             skills={[
               'Customer Focus',
