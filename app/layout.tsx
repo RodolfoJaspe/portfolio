@@ -3,6 +3,7 @@ import LocalFont from "@next/font/local";
 import { Metadata } from "next";
 import "../global.css";
 import { Analytics } from "./components/analytics";
+import { PWARegistration } from "./components/pwa-registration";
 
 export const metadata: Metadata = {
   title: {
@@ -42,6 +43,25 @@ export const metadata: Metadata = {
   },
   icons: {
     shortcut: "/favicon.png",
+    apple: "/icons/icon-192x192.png",
+  },
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Rodolfo Jaspe",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
+  other: {
+    "theme-color": "#000000",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-title": "Rodolfo Jaspe",
   },
 };
 const inter = Inter({
@@ -61,13 +81,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
-      <head>
-        <Analytics />
-      </head>
       <body
         className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
           }`}
       >
+        <Analytics />
+        <PWARegistration />
         {children}
       </body>
     </html>
